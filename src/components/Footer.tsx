@@ -22,7 +22,7 @@ function Footer() {
       </a>
       </div>
       <div className='flex justify-center text-sm'>
-        Copyright © 2021 Rachid Melouk. All rights reserved.</div>
+        Copyright © 2024 Rachid Melouk. All rights reserved.</div>
     </div>
   )
 }
