@@ -58,10 +58,10 @@ function Work() {
   return (
     <div ref={refItem} className='w-screen opacity-0'>
     <div className='justify-center flex w-screen'>
-    <div className={`flex flex-col items-center pt-[180px] text-black text-3xl ${inter.className} font-bold p-5 text-6xl bg-[linear-gradient(90deg,_rgba(158,158,167,1)_0%,_rgba(130,130,133,1)_47%,_rgba(50,50,53,1)_100%)] bg-clip-text text-transparent `}>
+    <div className={`max-sm:text-3xl flex flex-col items-center pt-[180px] text-black text-3xl ${inter.className} font-bold p-5 text-6xl bg-[linear-gradient(90deg,_rgba(158,158,167,1)_0%,_rgba(130,130,133,1)_47%,_rgba(50,50,53,1)_100%)] bg-clip-text text-transparent `}>
       <Image ref={portraitRef} src='/portrait.jpg' alt='portrait' width={120} height={120} unoptimized className='mb-[-20px] z-[-1]'/>
       <p className='mb-2'>Hi, I'm Rachid</p>
-      <p className={`text-lg font-normal ${roboto.className} text-[#929090]`}>Crafting solutions with Words, Code and Trade</p>
+      <p className={`text-lg max-sm:text-sm font-normal ${roboto.className} text-[#929090]`}>Crafting solutions with Words, Code and Trade</p>
       </div>
     </div>
     <h1 ref={carrerRef} className={` w-screen flex justify-center text-9xl text-[#dcd8d8] mt-[438px] ${iceBerg.className}`}>Career</h1>
