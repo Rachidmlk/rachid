@@ -15,6 +15,7 @@ export default function Home() {
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
+   
 
   }, [])
   return (

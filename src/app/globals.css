@@ -4,6 +4,7 @@
 
 :root {
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 body {
