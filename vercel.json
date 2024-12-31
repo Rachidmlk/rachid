@@ -1,0 +1,9 @@
+{
+    "redirects": [
+      {
+        "source": "https://rachid.com",
+        "destination": "https://www.rachid.com",
+        "permanent": true
+      }
+    ]
+  }
