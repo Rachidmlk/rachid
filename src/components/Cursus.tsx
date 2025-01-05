@@ -10,12 +10,15 @@ gsap.registerPlugin(ScrollTrigger)
 function Cursus(props: any) {
     const imageRef = useRef(null)
     const textRef = useRef(null)
+    const imageSmallRef = useRef(null)
+    const textSmallRef = useRef(null)
     const containerRef = useRef(null)
     const [state, setState] = useState<boolean>(true)
     useLayoutEffect(()=>{
       setState(!(window.innerWidth < 640))
     }, [state, setState])
     useGSAP(()=>{
+     
       if(window.innerWidth < 640) return
         gsap.from(containerRef.current, {
             width: '4500px',
@@ -37,7 +40,32 @@ function Cursus(props: any) {
                 scrub: true
               }
         })
+
     })
+    useGSAP(()=>{
+      gsap.from(imageSmallRef.current, {
+        opacity: 0.5,
+        x: 140,
+        scrollTrigger: {
+            trigger: imageSmallRef.current,
+            start: 'top 100%',
+            end: 'bottom 60%',
+            scrub: true,
+            markers: true
+          }
+    })
+      gsap.from(textSmallRef.current, {
+        opacity: 0.5,
+        x: -140,
+        scrollTrigger: {
+            trigger: imageSmallRef.current,
+            start: 'top 100%',
+            end: 'bottom 60%',
+            scrub: true,
+            markers: true
+          }
+    })
+    }, [state, setState])
     if (state){
   return (
     <div ref={containerRef} className='w-[1500px] m-auto flex max-sm:gap-8 max-sm:flex-col max-sm:w-[500px]  max-sm:justify-center justify-between items-center px-52 mb-16'>
@@ -51,10 +79,10 @@ function Cursus(props: any) {
   ) }
   return (
     <div  className='w-screen py-3 flex flex-col justify-center items-center mb-6 '>
-    <div >
+    <div ref={imageSmallRef}>
       <Image src={props.src} alt='bio' width={380} height={280} className='mb-3'/>
     </div>
-    <div className='w-[370px] bg[#e3e3e3] rounded-lg p-2 text-sm text-justify text-sky-950'>
+    <div ref={textSmallRef} className='w-[370px] bg[#e3e3e3] rounded-lg p-2 text-sm text-justify text-sky-950'>
     {props.text}
     </div>
   </div>
