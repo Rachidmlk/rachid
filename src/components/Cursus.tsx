@@ -51,7 +51,7 @@ function Cursus(props: any) {
             start: 'top 100%',
             end: 'bottom 60%',
             scrub: true,
-            markers: true
+           
           }
     })
       gsap.from(textSmallRef.current, {
@@ -62,7 +62,7 @@ function Cursus(props: any) {
             start: 'top 100%',
             end: 'bottom 60%',
             scrub: true,
-            markers: true
+            
           }
     })
     }, [state, setState])
