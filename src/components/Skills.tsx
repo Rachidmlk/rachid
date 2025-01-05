@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 function Skills() {
   const list = useRef(null)
   const skill = useRef(null)
+  const button = useRef(null)
   const button1 = useRef(null)
   const button2 = useRef(null)
   const button3 = useRef(null)
@@ -96,7 +97,7 @@ function Skills() {
     </div>
   )}
   return(
-    <div  className='flex w-screen  h-[700px] gap-12 justify-start flex-col items-center mb-28'>
+    <div  ref={button} className='flex w-screen  h-[700px] gap-12 justify-start flex-col items-center mb-28'>
     <div onClick={handleClick} className='bg-gray-300 rounded-full h-24 w-24 z-10 mb-[-25px] cursor-pointer flex flex-col justify-center gap-2 p-3'>
       <div ref={button1} className='h-1 w-[70px] rounded-lg bg-gray-700'></div>
       <div ref={button2} className='h-1 w-[70px] rounded-lg bg-gray-700'></div>

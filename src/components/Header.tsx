@@ -30,7 +30,7 @@ function Header(props: any) {
       })
     }, [logo, setLogo])
   return (
-    <div onClick={handleClick} className='pt-8 h-20 hover:cursor-pointer w-[1050px] m-auto flex justify-between items-center'>
+    <div onClick={handleClick} className='pt-8 h-20 hover:cursor-pointer max-sm:w-[430px] w-[1050px] m-auto flex justify-between items-center'>
       <Image src='/R.png' alt='logo' width={100} height={100}/>
       <div className='w-[100px] flex justify-center'>
       {logo == 'Melouk' && 
